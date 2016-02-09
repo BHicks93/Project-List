@@ -1,0 +1,100 @@
+
+<html>
+<head>
+	<title>WorkWorkWork</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">	
+	
+	<style>
+	body {font-family:sans-serif; color: #f2f3f4; background: #131516; overflow-x: hidden; margin:3%;}	
+
+	a:link, a:visited, a:active {color:#FFF; text-decoration:underline;}
+
+	.jtextfill {position: relative; width:100%; margin-bottom:0.3em;}
+
+	#footer { position: relative; height: 300px; width: 100%;}
+	.footer-col { max-width: 250px; float: left; margin-top: 2em; margin-right: 2em; }
+	</style>
+
+</head>
+
+<body>
+	<div class="jtextfill scrap">
+	<span>WebDesign</span>
+	</div>
+	<div class="jtextfill scrap">
+	<span>2016</span>
+	</div>
+	<div class="jtextfill scrap">
+	<span><a href="http://students.risd.edu/Students/bhicks/ego" target="_blank">Ego_BOOOOST</a></span>
+	</div>	
+	<div class="jtextfill scrap">
+	<span><a href="http://students.risd.edu/Students/bhicks/script" target="_blank">EloquentJavascript</a></span>
+	</div>		
+	<div class="jtextfill scrap">
+	<span><a href="http://bhicks93.github.io/plore/" target="_blank">Plore</a></span>
+	</div>
+	<div class="jtextfill scrap">
+	<span><a href="http://students.risd.edu/Students/bhicks/video" target="_blank">PopSongAPI</a></span>
+	</div>
+	<div class="jtextfill scrap">
+	<span><a href="https://protected-sea-85178.herokuapp.com" target="_blank">GenerativePortfolioProject</a></span>
+	</div>
+	<div class="jtextfill scrap">
+	<span><a href="/database" target="_blank">Database</a></span>
+	</div>
+	<div id="footer">
+		<div class="footer-col" id="footer-left">A Selection of projects created by Brian Hicks over six weeks in the winter of 2016. Visit class website at <a href="alovelywinter.com">alovelywinter.com</a> for assignments and references. </div>
+		<div class="footer-col" id="footer-middle">
+			Cool APIs:
+			<a href="http://developer.echonest.com/docs/v4/">Spotify Echo Nest,</a> 
+			<a href="http://openweathermap.org/api">Open Weather,</a> 
+			<a href="http://musicovery.com/api/doc/documentation.php">Musicovery,</a> 
+			<a href="https://www.flickr.com/services/api/">Flickr,</a> 
+			<a href="http://developer.nytimes.com/docs">NYTimes,</a> 
+			<a href="https://api.hypem.com/api-docs/">Hypem,</a> 
+			<a href="http://www.programmableweb.com/">Programmable Web,</a>
+			<a href="http://thecatapi.com/">Cat API,</a> 
+			<a href="http://sunlightfoundation.com/api/">Sunlight Foundation.</a>
+		</div>
+		<div class="footer-col" id="footer-right">
+			Good magicians never reveals their secrets. </br> Good artist copy great artists steal. </br> <a href="https://youtu.be/uA7cz2-H_ZQ">_</a>
+		</div>
+	</div>
+	
+<script language="javascript" type="text/javascript">
+
+(function($) {
+    $.fn.textfill = function(options) {
+        var fontSize = options.maxFontPixels;
+        var ourText = $('span:visible:first', this);
+        var maxWidth = $(this).width();
+        var textWidth;
+        var lineHeight;
+        do {
+                ourText.css('font-size', fontSize);
+                ourText.css('word-wrap', 'normal');
+                ourText.css('letter-spacing', '-0.02em');
+                lineHeight = 0.95 * fontSize;
+                fontSize = fontSize-2;
+                ourText.css('line-height', (lineHeight + (lineHeight/20)) + 'px');
+                textWidth = ourText.width();
+        } while (textWidth > maxWidth && fontSize > 3);
+        return this;
+    }
+})(jQuery);
+
+
+$(document).ready(function() {
+	
+	$('.jtextfill').each(function(i, val) {    
+	
+		$(this).textfill({ maxFontPixels: 660 });	
+	
+    });        
+});
+
+</script>
+</body>
+</html>
